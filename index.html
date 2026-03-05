@@ -67,7 +67,6 @@
         <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#challenge">XForecast</a>
         <a class="nav-link" href="#dates">Dates</a>
-        <a class="nav-link" href="#submission">Submission</a>
         <a class="nav-link" href="#speakers">Speakers</a>
         <a class="nav-link" href="#program">Program</a>
         <a class="nav-link" href="#organizers">Organizers</a>
@@ -105,8 +104,8 @@
             </p>
 
             <div class="mt-8 flex flex-wrap gap-3">
-              <a href="#submission" class="px-5 py-2.5 rounded-xl bg-white text-black font-semibold hover:bg-gray-100">
-                Submission
+              <a href="#challenge" class="px-5 py-2.5 rounded-xl bg-white text-black font-semibold hover:bg-gray-100">
+                Join Challenge
               </a>
               <a href="#program" class="px-5 py-2.5 rounded-xl border border-white/15 bg-white/5 text-white hover:bg-white/10">
                 View Program
@@ -151,30 +150,228 @@
       </div>
     </section>
 
-    <!-- Sections (stub) -->
+    <!-- About -->
     <section id="about" class="mx-auto max-w-6xl px-4 sm:px-6 py-14">
       <h2 class="text-2xl font-bold">About</h2>
       <div class="mt-4 glass-card rounded-2xl p-6 text-gray-300">
-        Write a 2–3 paragraph motivation here (from proposal), and a short bullet list of themes.
+        <p class="leading-relaxed">
+          Financial markets represent perhaps the most challenging frontier for machine learning: an environment characterized by
+          extreme non-stationarity, low signal-to-noise ratios, and high-stakes adversarial dynamics.
+          As the industry shifts toward agentic systems—autonomous entities capable of reasoning and planning—the gap between
+          empirical success and theoretical understanding widens.
+        </p>
+        <ul class="mt-4 space-y-2 text-sm text-gray-300">
+          <li class="flex gap-2"><span data-lucide="check" class="w-4 h-4 text-sky-300"></span> A unique laboratory for robustness: continual learning under constant distribution shift</li>
+          <li class="flex gap-2"><span data-lucide="check" class="w-4 h-4 text-sky-300"></span> The vanguard of AI safety & regulation: verification, certified robustness, governed autonomy</li>
+          <li class="flex gap-2"><span data-lucide="check" class="w-4 h-4 text-sky-300"></span> Agentic systems for mission-critical deployment in finance</li>
+        </ul>
       </div>
     </section>
 
+    <!-- XForecast -->
     <section id="challenge" class="mx-auto max-w-6xl px-4 sm:px-6 py-14">
       <h2 class="text-2xl font-bold">XForecast Challenge</h2>
       <div class="mt-4 grid md:grid-cols-2 gap-4">
         <div class="glass-card rounded-2xl p-6 text-gray-300">
           <div class="font-semibold">Overview</div>
           <p class="mt-2 text-sm text-gray-300">
-            News-grounded financial forecasting challenge (links TBA).
+            A community challenge on <b>news-grounded financial forecasting</b>, designed to test how modern AI—from reasoning agents
+            to multimodal foundation models—can be operationalized to deconstruct complex market narratives.
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-300">
+            <li class="flex gap-2"><span data-lucide="database" class="w-4 h-4 text-sky-300"></span> Dataset: 5 years of LSEG Reuters News aligned with market price/volume</li>
+            <li class="flex gap-2"><span data-lucide="target" class="w-4 h-4 text-sky-300"></span> Task: out-of-sample forecasting for 2024–2025</li>
+            <li class="flex gap-2"><span data-lucide="trophy" class="w-4 h-4 text-sky-300"></span> Prize: $4,500 prize pool</li>
+            <li class="flex gap-2"><span data-lucide="calendar" class="w-4 h-4 text-sky-300"></span> Timeline: April–June 2026</li>
+          </ul>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 text-gray-300">
+          <div class="font-semibold">Links (TBA)</div>
+          <ul class="mt-3 text-sm space-y-2">
+            <li>Challenge page: <span class="text-gray-400">TBA</span></li>
+            <li>Rules: <span class="text-gray-400">TBA</span></li>
+            <li>Submission: <span class="text-gray-400">TBA</span></li>
+            <li>Baseline: <span class="text-gray-400">TBA</span></li>
+          </ul>
+          <p class="mt-4 text-xs text-gray-400">
+            Public links will be added when available.
           </p>
         </div>
-        <div class="glass-card rounded-2xl p-6 text-gray-300">
-          <div class="font-semibold">Links</div>
-          <ul class="mt-2 text-sm space-y-2">
-            <li>Challenge page: TBA</li>
-            <li>Rules: TBA</li>
-            <li>Baseline: TBA</li>
-          </ul>
+      </div>
+    </section>
+
+    <!-- Dates -->
+    <section id="dates" class="mx-auto max-w-6xl px-4 sm:px-6 py-14">
+      <h2 class="text-2xl font-bold">Important Dates</h2>
+      <div class="mt-4 glass-card rounded-2xl p-6 text-gray-300">
+        <ul class="space-y-2 text-sm">
+          <li class="flex items-center gap-2"><span data-lucide="calendar-days" class="w-4 h-4 text-sky-300"></span> XForecast launch: <span class="text-gray-400">TBA (Apr 2026)</span></li>
+          <li class="flex items-center gap-2"><span data-lucide="calendar-check" class="w-4 h-4 text-sky-300"></span> XForecast deadline: <span class="text-gray-400">TBA (Jun 2026)</span></li>
+          <li class="flex items-center gap-2"><span data-lucide="map-pin" class="w-4 h-4 text-sky-300"></span> Workshop day: <span class="text-gray-400">TBA (ICML 2026)</span></li>
+        </ul>
+        <p class="mt-4 text-xs text-gray-400">Dates will be updated as soon as they are confirmed.</p>
+      </div>
+    </section>
+
+    <!-- Speakers -->
+    <section id="speakers" class="mx-auto max-w-6xl px-4 sm:px-6 py-14">
+      <h2 class="text-2xl font-bold">Invited Speakers</h2>
+      <div class="mt-4 glass-card rounded-2xl p-6 text-gray-300">
+        <p class="text-gray-300">
+          The list of confirmed speakers will be announced soon. Stay tuned!
+        </p>
+      </div>
+    </section>
+
+    <!-- Program (proposal timetable) -->
+    <section id="program" class="mx-auto max-w-6xl px-4 sm:px-6 py-14">
+      <h2 class="text-2xl font-bold">Program</h2>
+      <p class="mt-2 text-gray-300">Draft schedule (all in-person). Room TBA.</p>
+
+      <div class="mt-6 glass-card rounded-2xl overflow-hidden">
+        <div class="grid grid-cols-12 gap-0 text-sm">
+          <div class="col-span-12 grid grid-cols-12 px-5 py-3 border-b border-white/10 bg-white/5 text-gray-300 font-semibold">
+            <div class="col-span-3 sm:col-span-2">Time</div>
+            <div class="col-span-9 sm:col-span-6">Activity</div>
+            <div class="hidden sm:block sm:col-span-4">Description</div>
+          </div>
+
+          <div class="col-span-12 grid grid-cols-12 px-5 py-4 border-b border-white/10">
+            <div class="col-span-3 sm:col-span-2 text-gray-200">08:00–08:15</div>
+            <div class="col-span-9 sm:col-span-6 text-gray-200 font-medium">Opening</div>
+            <div class="hidden sm:block sm:col-span-4 text-gray-400">Welcome and workshop objectives.</div>
+          </div>
+
+          <div class="col-span-12 grid grid-cols-12 px-5 py-4 border-b border-white/10">
+            <div class="col-span-3 sm:col-span-2 text-gray-200">08:15–09:45</div>
+            <div class="col-span-9 sm:col-span-6 text-gray-200 font-medium">Invited talks I</div>
+            <div class="hidden sm:block sm:col-span-4 text-gray-400">Top researchers from academia and industry.</div>
+          </div>
+
+          <div class="col-span-12 grid grid-cols-12 px-5 py-4 border-b border-white/10">
+            <div class="col-span-3 sm:col-span-2 text-gray-200">09:45–10:30</div>
+            <div class="col-span-9 sm:col-span-6 text-gray-200 font-medium">Oral Session</div>
+            <div class="hidden sm:block sm:col-span-4 text-gray-400">Top-tier contributed papers.</div>
+          </div>
+
+          <div class="col-span-12 grid grid-cols-12 px-5 py-4 border-b border-white/10">
+            <div class="col-span-3 sm:col-span-2 text-gray-200">10:30–11:15</div>
+            <div class="col-span-9 sm:col-span-6 text-gray-200 font-medium">Coffee & Posters</div>
+            <div class="hidden sm:block sm:col-span-4 text-gray-400">In-person poster session and networking.</div>
+          </div>
+
+          <div class="col-span-12 grid grid-cols-12 px-5 py-4 border-b border-white/10">
+            <div class="col-span-3 sm:col-span-2 text-gray-200">11:15–12:30</div>
+            <div class="col-span-9 sm:col-span-6 text-gray-200 font-medium">XForecast Session</div>
+            <div class="hidden sm:block sm:col-span-4 text-gray-400">Presentations from challenge winners.</div>
+          </div>
+
+          <div class="col-span-12 grid grid-cols-12 px-5 py-4 border-b border-white/10">
+            <div class="col-span-3 sm:col-span-2 text-gray-200">12:30–14:00</div>
+            <div class="col-span-9 sm:col-span-6 text-gray-200 font-medium">Lunch Break</div>
+            <div class="hidden sm:block sm:col-span-4 text-gray-400">Informal networking.</div>
+          </div>
+
+          <div class="col-span-12 grid grid-cols-12 px-5 py-4 border-b border-white/10">
+            <div class="col-span-3 sm:col-span-2 text-gray-200">14:00–15:30</div>
+            <div class="col-span-9 sm:col-span-6 text-gray-200 font-medium">Invited talks II</div>
+            <div class="hidden sm:block sm:col-span-4 text-gray-400">Top researchers from academia and industry.</div>
+          </div>
+
+          <div class="col-span-12 grid grid-cols-12 px-5 py-4 border-b border-white/10">
+            <div class="col-span-3 sm:col-span-2 text-gray-200">15:30–16:30</div>
+            <div class="col-span-9 sm:col-span-6 text-gray-200 font-medium">Panel Discussion</div>
+            <div class="hidden sm:block sm:col-span-4 text-gray-400">Academia, hedge funds, investment banks, central banks, government, etc.</div>
+          </div>
+
+          <div class="col-span-12 grid grid-cols-12 px-5 py-4">
+            <div class="col-span-3 sm:col-span-2 text-gray-200">16:30–17:00</div>
+            <div class="col-span-9 sm:col-span-6 text-gray-200 font-medium">Awards & Closing</div>
+            <div class="hidden sm:block sm:col-span-4 text-gray-400">Best paper and XForecast challenge winners.</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-3 text-xs text-gray-400">Schedule is subject to change.</p>
+    </section>
+
+    <!-- Organizers -->
+    <section id="organizers" class="mx-auto max-w-6xl px-4 sm:px-6 py-14">
+      <h2 class="text-2xl font-bold">Organizers</h2>
+      <p class="mt-2 text-gray-300">Organizing committee (in-person participation confirmed).</p>
+
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="glass-card rounded-2xl p-5 flex gap-4">
+          <img src="images/organizers/wonbin_ahn.png" alt="Wonbin Ahn" class="w-14 h-14 rounded-xl object-cover border border-white/10 bg-white/5">
+          <div>
+            <div class="font-semibold text-gray-200">Wonbin Ahn</div>
+            <div class="text-sm text-gray-400">LG AI Research</div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 flex gap-4">
+          <img src="images/organizers/yongjae_lee.png" alt="Yongjae Lee" class="w-14 h-14 rounded-xl object-cover border border-white/10 bg-white/5">
+          <div>
+            <div class="font-semibold text-gray-200">Yongjae Lee</div>
+            <div class="text-sm text-gray-400">UNIST</div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 flex gap-4">
+          <img src="images/organizers/soonyoung_lee.png" alt="Soonyoung Lee" class="w-14 h-14 rounded-xl object-cover border border-white/10 bg-white/5">
+          <div>
+            <div class="font-semibold text-gray-200">Soonyoung Lee</div>
+            <div class="text-sm text-gray-400">LG AI Research</div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 flex gap-4">
+          <img src="images/organizers/nazanin_mehrasa.png" alt="Nazanin Mehrasa" class="w-14 h-14 rounded-xl object-cover border border-white/10 bg-white/5">
+          <div>
+            <div class="font-semibold text-gray-200">Nazanin Mehrasa</div>
+            <div class="text-sm text-gray-400">RBC Borealis</div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 flex gap-4">
+          <img src="images/organizers/thorsten_neumann.png" alt="Thorsten Neumann" class="w-14 h-14 rounded-xl object-cover border border-white/10 bg-white/5">
+          <div>
+            <div class="font-semibold text-gray-200">Thorsten Neumann</div>
+            <div class="text-sm text-gray-400">Standard Chartered</div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 flex gap-4">
+          <img src="images/organizers/chanyeol_choi.png" alt="Chanyeol Choi" class="w-14 h-14 rounded-xl object-cover border border-white/10 bg-white/5">
+          <div>
+            <div class="font-semibold text-gray-200">Chanyeol Choi</div>
+            <div class="text-sm text-gray-400">LinqAlpha</div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 flex gap-4">
+          <img src="images/organizers/georgios_papaioannou.png" alt="Georgios Papaioannou" class="w-14 h-14 rounded-xl object-cover border border-white/10 bg-white/5">
+          <div>
+            <div class="font-semibold text-gray-200">Georgios Papaioannou</div>
+            <div class="text-sm text-gray-400">Qube Research & Technologies</div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 flex gap-4">
+          <img src="images/organizers/hyeongmin_lee.png" alt="Hyeongmin Lee" class="w-14 h-14 rounded-xl object-cover border border-white/10 bg-white/5">
+          <div>
+            <div class="font-semibold text-gray-200">Hyeongmin Lee</div>
+            <div class="text-sm text-gray-400">SeoulTech</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 glass-card rounded-2xl p-6">
+        <div class="text-sm text-gray-300 font-semibold">Primary Contacts</div>
+        <div class="mt-2 text-sm text-gray-400">
+          Wonbin Ahn (<a class="underline hover:text-sky-300" href="mailto:wonbin.ahn@lgresearch.ai">wonbin.ahn@lgresearch.ai</a>) ·
+          Yongjae Lee (<a class="underline hover:text-sky-300" href="mailto:yongjaelee@unist.ac.kr">yongjaelee@unist.ac.kr</a>)
         </div>
       </div>
     </section>
