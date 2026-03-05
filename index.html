@@ -1,304 +1,193 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Advances in Financial AI @ ICML 2026</title>
-  <meta name="description" content="ICML 2026 Workshop on Advances in Financial AI: Agentic, Robust, and Responsible Systems." />
-  <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/main.js"></script>
+
+  <!-- Social preview (OG/Twitter) -->
+  <meta property="og:title" content="Advances in Financial AI @ ICML 2026">
+  <meta property="og:description" content="Agentic, Robust, and Responsible Systems + XForecast Challenge">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://YOUR-DOMAIN.github.io/logo.png?v=1">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://YOUR-DOMAIN.github.io/logo.png?v=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:#0a0a0a;
+      color:#e2e8f0;
+    }
+    .glass-card{
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+    .gradient-text{
+      background: linear-gradient(to right, #38bdf8, #a78bfa, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-link{ transition: color .25s ease; }
+    .nav-link:hover{ color:#38bdf8; }
+
+    /* Hero aurora background */
+    #hero{
+      background-color:#0a0a0a;
+      background-image:
+        radial-gradient(at 15% 25%, hsla(204, 86%, 53%, 0.15) 0px, transparent 55%),
+        radial-gradient(at 70% 15%, hsla(266, 90%, 70%, 0.12) 0px, transparent 55%),
+        radial-gradient(at 35% 80%, hsla(330, 85%, 65%, 0.10) 0px, transparent 55%);
+    }
+  </style>
 </head>
 
-<body>
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <a class="brand" href="#top">
-        <span class="brand__title">Advances in Financial AI</span>
-        <span class="brand__tag">ICML 2026 Workshop</span>
+<body class="antialiased">
+  <!-- Sticky Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-lg border-b border-gray-800">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-3 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3">
+        <img src="logo.png" alt="Workshop logo" class="h-8 w-8 rounded-md" />
+        <div class="leading-tight">
+          <div class="font-semibold">Advances in Financial AI</div>
+          <div class="text-xs text-gray-400">ICML 2026 Workshop</div>
+        </div>
       </a>
 
-      <button class="navbtn" id="navbtn" aria-label="Toggle navigation" aria-expanded="false">
-        ☰
-      </button>
-
-      <nav class="nav" id="nav">
-        <a href="#about">About</a>
-        <a href="#challenge">XForecast Challenge</a>
-        <a href="#dates">Important Dates</a>
-        <a href="#submission">Submission</a>
-        <a href="#speakers">Invited Speakers</a>
-        <a href="#program">Program</a>
-        <a href="#organizers">Organizers</a>
-        <a href="#sponsors">Sponsors</a>
-        <a href="#contact">Contact</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#challenge">XForecast</a>
+        <a class="nav-link" href="#dates">Dates</a>
+        <a class="nav-link" href="#submission">Submission</a>
+        <a class="nav-link" href="#speakers">Speakers</a>
+        <a class="nav-link" href="#program">Program</a>
+        <a class="nav-link" href="#organizers">Organizers</a>
       </nav>
+
+      <a href="#challenge" class="hidden md:inline-flex px-4 py-2 rounded-xl bg-sky-400/10 text-sky-200 border border-sky-400/20 hover:bg-sky-400/15">
+        Join Challenge
+      </a>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero__grid">
-        <div>
-          <p class="pill">ICML 2026 · In-person · Seoul (TBD)</p>
-          <h1>Advances in Financial AI</h1>
-          <p class="lead">Agentic, Robust, and Responsible Systems</p>
-          <p class="muted">
-            Finance is a stress test for ML: extreme non-stationarity, low SNR, and adversarial dynamics.
-            This workshop bridges core ML research and financial applications, emphasizing agentic systems,
-            robustness, and responsible deployment.
-          </p>
+  <main id="top" class="pt-20">
+    <!-- Hero -->
+    <section id="hero" class="relative overflow-hidden">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-20">
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-sm text-gray-200">
+              <span>In-person</span><span class="text-gray-500">•</span>
+              <span>Seoul (TBD)</span><span class="text-gray-500">•</span>
+              <span>ICML 2026</span>
+            </div>
 
-          <div class="cta">
-            <a class="btn" href="#submission">Submission</a>
-            <a class="btn btn--ghost" href="#challenge">Join XForecast</a>
-          </div>
-
-          <p class="small muted" style="margin-top:10px;">
-            Last updated: <span id="lastUpdated">YYYY-MM-DD</span>
-          </p>
-        </div>
-
-        <div class="card hero__card">
-          <h3>Quick Info</h3>
-          <ul class="list">
-            <li><b>Format</b>: invited talks + contributed papers + panel</li>
-            <li><b>Special</b>: XForecast Challenge session</li>
-            <li><b>Poster</b>: in-person poster & networking</li>
-            <li><b>Awards</b>: best paper + challenge winners</li>
-          </ul>
-          <div class="hr"></div>
-          <p class="small muted">
-            Replace “TBD” fields once ICML venue/time is confirmed.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About</h2>
-        <div class="grid">
-          <div>
-            <p>
-              Financial markets represent one of the most challenging frontiers for ML:
-              constant distribution shift, low signal-to-noise ratios, and high-stakes decisions.
-              As the industry shifts toward agentic systems—autonomous entities capable of reasoning and planning—
-              the gap between empirical success and theoretical understanding widens.
+            <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold tracking-tight">
+              <span class="gradient-text">Advances in Financial AI</span>
+            </h1>
+            <p class="mt-4 text-lg text-gray-300">
+              Agentic, Robust, and Responsible Systems
             </p>
-            <ul class="list">
-              <li><b>Robustness & OOD</b>: continual learning under non-stationarity</li>
-              <li><b>Safety & Regulation</b>: verifiable, certified robustness in high-stakes domains</li>
-              <li><b>Agentic systems</b>: planning, tool use, multi-agent coordination</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>What you'll see</h3>
-            <ul class="list">
-              <li>Invited talks from academia + industry</li>
-              <li>Oral session for top contributed papers</li>
-              <li>Poster session + networking</li>
-              <li>XForecast winners presentations</li>
-              <li>Panel with wide stakeholder spectrum</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="challenge" class="section alt">
-      <div class="container">
-        <h2>XForecast Challenge</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Overview</h3>
-            <p class="muted">
-              A community challenge on <b>news-grounded financial forecasting</b>,
-              designed to test how modern AI—from reasoning agents to multimodal foundation models—
-              can deconstruct complex market narratives.
+            <p class="mt-6 text-gray-300 leading-relaxed">
+              Financial markets are a stress test for machine learning: extreme non-stationarity, low signal-to-noise ratios,
+              and high-stakes adversarial dynamics. This workshop connects core ML research and financial applications,
+              with a special focus on agentic systems, robustness, and responsible deployment.
             </p>
-            <ul class="list">
-              <li><b>Dataset</b>: 5 years of Reuters News (LSEG) aligned with market price/volume</li>
-              <li><b>Task</b>: out-of-sample forecasting for 2024–2025</li>
-              <li><b>Prize</b>: $4,500 prize pool (LG AI Research)</li>
-              <li><b>Timeline</b>: Apr–Jun 2026 (TBD exact dates)</li>
-            </ul>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#submission" class="px-5 py-2.5 rounded-xl bg-white text-black font-semibold hover:bg-gray-100">
+                Submission
+              </a>
+              <a href="#program" class="px-5 py-2.5 rounded-xl border border-white/15 bg-white/5 text-white hover:bg-white/10">
+                View Program
+              </a>
+            </div>
           </div>
 
-          <div class="card">
-            <h3>Links (TBD)</h3>
-            <ul class="list">
-              <li><b>Challenge page</b>: <a href="#" onclick="return false;">TBA</a></li>
-              <li><b>Rules</b>: <a href="#" onclick="return false;">TBA</a></li>
-              <li><b>Submission</b>: <a href="#" onclick="return false;">TBA</a></li>
-              <li><b>Baseline</b>: <a href="#" onclick="return false;">TBA</a></li>
-            </ul>
-            <p class="small muted">Add public links when ready.</p>
+          <div class="lg:col-span-5">
+            <div class="glass-card rounded-2xl p-5">
+              <div class="text-sm text-gray-300 font-semibold">Highlights</div>
+              <ul class="mt-3 space-y-2 text-gray-300">
+                <li class="flex gap-2"><span data-lucide="sparkles" class="w-4 h-4 text-sky-300"></span> XForecast: news-grounded forecasting</li>
+                <li class="flex gap-2"><span data-lucide="shield" class="w-4 h-4 text-sky-300"></span> Robustness, verification, governance</li>
+                <li class="flex gap-2"><span data-lucide="users" class="w-4 h-4 text-sky-300"></span> Academia + industry invited speakers</li>
+              </ul>
+
+              <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+                <div class="glass-card rounded-xl p-3">
+                  <div class="text-gray-400">Prize Pool</div>
+                  <div class="font-semibold">$4,500</div>
+                </div>
+                <div class="glass-card rounded-xl p-3">
+                  <div class="text-gray-400">Timeline</div>
+                  <div class="font-semibold">Apr–Jun 2026</div>
+                </div>
+                <div class="glass-card rounded-xl p-3">
+                  <div class="text-gray-400">Dataset</div>
+                  <div class="font-semibold">LSEG Reuters News</div>
+                </div>
+                <div class="glass-card rounded-xl p-3">
+                  <div class="text-gray-400">Format</div>
+                  <div class="font-semibold">Talks + Posters + Panel</div>
+                </div>
+              </div>
+
+              <p class="mt-4 text-xs text-gray-400">
+                Replace TBD fields as soon as venue & deadlines are confirmed.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="dates" class="section">
-      <div class="container">
-        <h2>Important Dates</h2>
-        <div class="card">
-          <ul class="list">
-            <li><b>XForecast Launch</b>: 2026-04-XX</li>
-            <li><b>Paper Submission Deadline</b>: 2026-05-XX (AoE)</li>
-            <li><b>Notification</b>: 2026-06-XX</li>
-            <li><b>Camera-ready</b>: 2026-06-XX</li>
-            <li><b>Workshop</b>: ICML 2026 (TBD)</li>
+    <!-- Sections (stub) -->
+    <section id="about" class="mx-auto max-w-6xl px-4 sm:px-6 py-14">
+      <h2 class="text-2xl font-bold">About</h2>
+      <div class="mt-4 glass-card rounded-2xl p-6 text-gray-300">
+        Write a 2–3 paragraph motivation here (from proposal), and a short bullet list of themes.
+      </div>
+    </section>
+
+    <section id="challenge" class="mx-auto max-w-6xl px-4 sm:px-6 py-14">
+      <h2 class="text-2xl font-bold">XForecast Challenge</h2>
+      <div class="mt-4 grid md:grid-cols-2 gap-4">
+        <div class="glass-card rounded-2xl p-6 text-gray-300">
+          <div class="font-semibold">Overview</div>
+          <p class="mt-2 text-sm text-gray-300">
+            News-grounded financial forecasting challenge (links TBA).
+          </p>
+        </div>
+        <div class="glass-card rounded-2xl p-6 text-gray-300">
+          <div class="font-semibold">Links</div>
+          <ul class="mt-2 text-sm space-y-2">
+            <li>Challenge page: TBA</li>
+            <li>Rules: TBA</li>
+            <li>Baseline: TBA</li>
           </ul>
         </div>
-        <p class="small muted">Tip: use AoE for deadlines.</p>
       </div>
     </section>
 
-    <section id="submission" class="section alt">
-      <div class="container">
-        <h2>Submission</h2>
-        <div class="grid">
-          <div>
-            <p class="muted">
-              (If you really want to omit CFP) keep this section minimal:
-              “We welcome submissions aligned with workshop themes; accepted works will be presented as oral/poster.”
-            </p>
-            <ul class="list">
-              <li><b>OpenReview</b>: <a href="#" onclick="return false;">TBA</a></li>
-              <li><b>Format</b>: ICML style (TBD page limit)</li>
-              <li><b>Presentation</b>: poster + selected oral</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Topics (short list)</h3>
-            <ul class="list">
-              <li>robust learning under distribution shift</li>
-              <li>agentic systems for financial decision-making</li>
-              <li>news & multimodal forecasting</li>
-              <li>verification / safety / governance in finance</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="speakers" class="section">
-      <div class="container">
-        <h2>Invited Speakers</h2>
-        <div class="cards">
-          <div class="card person">
-            <div class="person__name">Renyuan Xu</div>
-            <div class="person__meta muted">Stanford University · Financial Mathematics</div>
-            <div class="small muted">Confirmed</div>
-          </div>
-          <div class="card person">
-            <div class="person__name">Atlas Wang</div>
-            <div class="person__meta muted">XTX Markets / UT Austin · Deep Learning Theory</div>
-            <div class="small muted">Confirmed</div>
-          </div>
-          <div class="card person">
-            <div class="person__name">Eric Jiawei He</div>
-            <div class="person__meta muted">RBC Borealis · Computer Vision & Financial ML</div>
-            <div class="small muted">Confirmed</div>
-          </div>
-          <div class="card person">
-            <div class="person__name">Joo Lee</div>
-            <div class="person__meta muted">Arrowpoint Partners · Agentic Systems in Hedge Fund</div>
-            <div class="small muted">Confirmed</div>
-          </div>
-          <div class="card person">
-            <div class="person__name">Dhagash Mehta</div>
-            <div class="person__meta muted">BlackRock · Applied AI Research</div>
-            <div class="small muted">Confirmed</div>
-          </div>
-          <div class="card person">
-            <div class="person__name">Lily Rachmawati</div>
-            <div class="person__meta muted">BNP Paribas · Applied AI</div>
-            <div class="small muted">Confirmed</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="program" class="section alt">
-      <div class="container">
-        <h2>Program (Draft)</h2>
-        <div class="card">
-          <div class="table">
-            <div class="row head"><div>Time</div><div>Session</div><div>Notes</div></div>
-
-            <div class="row"><div>08:00–08:15</div><div>Opening</div><div>Welcome & objectives</div></div>
-            <div class="row"><div>08:15–09:45</div><div>Invited Talks I</div><div>Academia + industry</div></div>
-            <div class="row"><div>09:45–10:30</div><div>Oral Session</div><div>Top contributed papers</div></div>
-            <div class="row"><div>10:30–11:15</div><div>Coffee & Posters</div><div>Networking</div></div>
-            <div class="row"><div>11:15–12:30</div><div>XForecast Session</div><div>Challenge winners</div></div>
-            <div class="row"><div>12:30–14:00</div><div>Lunch</div><div>Informal networking</div></div>
-            <div class="row"><div>14:00–15:30</div><div>Invited Talks II</div><div>Academia + industry</div></div>
-            <div class="row"><div>15:30–16:30</div><div>Panel Discussion</div><div>Regulators, funds, banks, etc.</div></div>
-            <div class="row"><div>16:30–17:00</div><div>Awards & Closing</div><div>Best paper + challenge awards</div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="organizers" class="section">
-      <div class="container">
-        <h2>Organizers</h2>
-        <div class="cards">
-          <div class="card person"><div class="person__name">Wonbin Ahn</div><div class="person__meta muted">LG AI Research</div></div>
-          <div class="card person"><div class="person__name">Yongjae Lee</div><div class="person__meta muted">UNIST</div></div>
-          <div class="card person"><div class="person__name">Soonyoung Lee</div><div class="person__meta muted">LG AI Research</div></div>
-          <div class="card person"><div class="person__name">Nazanin Mehrasa</div><div class="person__meta muted">RBC Borealis</div></div>
-          <div class="card person"><div class="person__name">Thorsten Neumann</div><div class="person__meta muted">Standard Chartered</div></div>
-          <div class="card person"><div class="person__name">Chanyeol Choi</div><div class="person__meta muted">LinqAlpha</div></div>
-          <div class="card person"><div class="person__name">Georgios Papaioannou</div><div class="person__meta muted">Qube Research & Technologies</div></div>
-          <div class="card person"><div class="person__name">Hyeongmin Lee</div><div class="person__meta muted">SeoulTech</div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="sponsors" class="section alt">
-      <div class="container">
-        <h2>Sponsors & Partners</h2>
-        <div class="cards">
-          <div class="card"><b>LG AI Research</b><div class="small muted">Prize pool sponsor</div></div>
-          <div class="card"><b>LSEG</b><div class="small muted">Dataset support</div></div>
-          <div class="card"><b>RBC Borealis</b><div class="small muted">Support (TBD)</div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact</h2>
-        <div class="grid">
-          <div class="card">
-            <p><b>Primary Contacts</b></p>
-            <ul class="list">
-              <li>Wonbin Ahn — <a href="mailto:wonbin.ahn@lgresearch.ai">wonbin.ahn@lgresearch.ai</a></li>
-              <li>Yongjae Lee — <a href="mailto:yongjaelee@unist.ac.kr">yongjaelee@unist.ac.kr</a></li>
-            </ul>
-          </div>
-          <div class="card">
-            <p><b>Links</b></p>
-            <ul class="list">
-              <li>OpenReview: TBA</li>
-              <li>Challenge: TBA</li>
-              <li>Social: optional</li>
-            </ul>
-          </div>
-        </div>
-        <p class="small muted" style="margin-top:10px;">
-          Hosted on GitHub Pages.
-        </p>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container small muted">
-        © Organizers · GitHub Pages
+    <footer class="border-t border-gray-800 py-10">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 text-sm text-gray-400">
+        © Organizers · Hosted on GitHub Pages
       </div>
     </footer>
   </main>
+
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
