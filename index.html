@@ -31,6 +31,7 @@
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border: 1px solid rgba(255,255,255,0.10);
+      transition: all 0.25s ease;
     }
     .gradient-text{
       background: linear-gradient(90deg,
@@ -52,6 +53,21 @@
         radial-gradient(at 15% 25%, hsla(204, 86%, 53%, 0.15) 0px, transparent 55%),
         radial-gradient(at 70% 15%, hsla(266, 90%, 70%, 0.12) 0px, transparent 55%),
         radial-gradient(at 35% 80%, hsla(330, 85%, 65%, 0.10) 0px, transparent 55%);
+    }
+    /* gradient glow hover effect (logo color based) */
+    .glow-card{
+      transition: all 0.25s ease;
+    }
+
+    .glow-card:hover{
+      transform: translateY(-3px) scale(1.03);
+
+      border-color: rgba(180,58,234,0.6);
+
+      box-shadow:
+        0 0 0 1px rgba(180,58,234,0.35),
+        0 10px 40px rgba(232,72,166,0.35),
+        0 0 60px rgba(250,144,111,0.25);
     }
   </style>
 </head>
@@ -309,7 +325,7 @@
       <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
     
         <a href="https://www.linkedin.com/in/wonbin-ahn/" target="_blank" class="block">
-          <div class="glass-card rounded-2xl p-5 flex gap-4 hover:border-sky-400/40 transition">
+          <div class="glass-card glow-card rounded-2xl p-5 flex gap-4">
             <img src="images/organizers/wonbin_ahn.png" class="w-14 h-14 rounded-xl object-cover border border-white/10">
             <div>
               <div class="font-semibold text-gray-200">Wonbin Ahn</div>
@@ -319,7 +335,7 @@
         </a>
     
         <a href="https://www.linkedin.com/in/yongjae-lee-548982107/" target="_blank" class="block">
-          <div class="glass-card rounded-2xl p-5 flex gap-4 hover:border-sky-400/40 transition">
+          <div class="glass-card glow-card rounded-2xl p-5 flex gap-4">
             <img src="images/organizers/yongjae_lee.png" class="w-14 h-14 rounded-xl object-cover border border-white/10">
             <div>
               <div class="font-semibold text-gray-200">Yongjae Lee</div>
@@ -329,7 +345,7 @@
         </a>
     
         <a href="https://www.linkedin.com/in/soonyoung-lee-4309061a9/" target="_blank" class="block">
-          <div class="glass-card rounded-2xl p-5 flex gap-4 hover:border-sky-400/40 transition">
+          <div class="glass-card glow-card rounded-2xl p-5 flex gap-4">
             <img src="images/organizers/soonyoung_lee.png" class="w-14 h-14 rounded-xl object-cover border border-white/10">
             <div>
               <div class="font-semibold text-gray-200">Soonyoung Lee</div>
@@ -339,7 +355,7 @@
         </a>
     
         <a href="https://www.linkedin.com/in/nazanin-mehrasa-51444b72/" target="_blank" class="block">
-          <div class="glass-card rounded-2xl p-5 flex gap-4 hover:border-sky-400/40 transition">
+          <div class="glass-card glow-card rounded-2xl p-5 flex gap-4">
             <img src="images/organizers/nazanin_mehrasa.png" class="w-14 h-14 rounded-xl object-cover border border-white/10">
             <div>
               <div class="font-semibold text-gray-200">Nazanin Mehrasa</div>
@@ -349,7 +365,7 @@
         </a>
     
         <a href="LINK" target="_blank" class="block">
-          <div class="glass-card rounded-2xl p-5 flex gap-4 hover:border-sky-400/40 transition">
+          <div class="glass-card glow-card rounded-2xl p-5 flex gap-4">
             <img src="images/organizers/thorsten_neumann.png" class="w-14 h-14 rounded-xl object-cover border border-white/10">
             <div>
               <div class="font-semibold text-gray-200">Thorsten Neumann</div>
@@ -359,7 +375,7 @@
         </a>
     
         <a href="https://www.linkedin.com/in/chanyeolchoi/" target="_blank" class="block">
-          <div class="glass-card rounded-2xl p-5 flex gap-4 hover:border-sky-400/40 transition">
+          <div class="glass-card glow-card rounded-2xl p-5 flex gap-4">
             <img src="images/organizers/chanyeol_choi.png" class="w-14 h-14 rounded-xl object-cover border border-white/10">
             <div>
               <div class="font-semibold text-gray-200">Chanyeol Choi</div>
@@ -369,7 +385,7 @@
         </a>
     
         <a href="LINK" target="_blank" class="block">
-          <div class="glass-card rounded-2xl p-5 flex gap-4 hover:border-sky-400/40 transition">
+          <div class="glass-card glow-card rounded-2xl p-5 flex gap-4">
             <img src="images/organizers/georgios_papaioannou.png" class="w-14 h-14 rounded-xl object-cover border border-white/10">
             <div>
               <div class="font-semibold text-gray-200">Georgios Papaioannou</div>
@@ -379,7 +395,7 @@
         </a>
     
         <a href="LINK" target="_blank" class="block">
-          <div class="glass-card rounded-2xl p-5 flex gap-4 hover:border-sky-400/40 transition">
+          <div class="glass-card glow-card rounded-2xl p-5 flex gap-4">
             <img src="images/organizers/hyeongmin_lee.png" class="w-14 h-14 rounded-xl object-cover border border-white/10">
             <div>
               <div class="font-semibold text-gray-200">Hyeongmin Lee</div>
