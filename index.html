@@ -44,15 +44,14 @@
       -webkit-text-fill-color: transparent;
     }
     .nav-link{ transition: color .25s ease; }
-    .nav-link:hover{ color:#38bdf8; }
+    .nav-link:hover{ color:#E848A6; }
 
     /* Hero aurora background */
     #hero{
-      background-color:#0a0a0a;
       background-image:
-        radial-gradient(at 15% 25%, hsla(204, 86%, 53%, 0.15) 0px, transparent 55%),
-        radial-gradient(at 70% 15%, hsla(266, 90%, 70%, 0.12) 0px, transparent 55%),
-        radial-gradient(at 35% 80%, hsla(330, 85%, 65%, 0.10) 0px, transparent 55%);
+        radial-gradient(at 15% 25%, rgba(110,74,239,0.15) 0px, transparent 55%),
+        radial-gradient(at 70% 15%, rgba(232,72,166,0.12) 0px, transparent 55%),
+        radial-gradient(at 35% 80%, rgba(250,144,111,0.10) 0px, transparent 55%);
     }
     /* gradient glow hover effect (logo color based) */
     .glow-card{
@@ -92,7 +91,12 @@
         <a class="nav-link" href="#organizers">Organizers</a>
       </nav>
 
-      <a href="#challenge" class="hidden md:inline-flex px-4 py-2 rounded-xl bg-sky-400/10 text-sky-200 border border-sky-400/20 hover:bg-sky-400/15">
+      <a href="https://www.kaggle.com/competitions/xforecast-challenge-icml/"
+        target="_blank"
+        class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl
+                bg-gradient-to-r from-[#6E4AEF] via-[#E848A6] to-[#FA906F]
+                text-white font-medium hover:opacity-90 transition">
+        <span data-lucide="external-link" class="w-4 h-4"></span>
         Join Challenge
       </a>
     </div>
@@ -101,68 +105,134 @@
   <main id="top" class="pt-20">
     <!-- Hero -->
     <section id="hero" class="relative overflow-hidden">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-20">
-        <div class="grid lg:grid-cols-12 gap-8 items-start">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-24">
+        <div class="grid lg:grid-cols-12 gap-10 items-start">
           <div class="lg:col-span-7">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-sm text-gray-200">
-              <span>In-person</span><span class="text-gray-500">•</span>
-              <span>Seoul (TBD)</span><span class="text-gray-500">•</span>
+              <span>In-person</span>
+              <span class="text-gray-500">•</span>
+              <span>Seoul (TBD)</span>
+              <span class="text-gray-500">•</span>
               <span>ICML 2026</span>
             </div>
 
-            <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold tracking-tight">
+            <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
               <span class="gradient-text">Advances in Financial AI</span>
             </h1>
-            <p class="mt-4 text-lg text-gray-300">
+
+            <p class="mt-4 text-xl text-gray-300 font-medium">
               Agentic, Robust, and Responsible Systems
             </p>
 
-            <p class="mt-6 text-gray-300 leading-relaxed">
-              Financial markets are a stress test for machine learning: extreme non-stationarity, low signal-to-noise ratios,
-              and high-stakes adversarial dynamics. This workshop connects core ML research and financial applications,
-              with a special focus on agentic systems, robustness, and responsible deployment.
+            <p class="mt-6 max-w-3xl text-gray-300 leading-relaxed text-base sm:text-lg">
+              Financial markets are a demanding stress test for machine learning:
+              extreme non-stationarity, low signal-to-noise ratios, and adversarial dynamics.
+              This workshop brings together researchers from machine learning, quantitative finance,
+              and industry to advance <span class="text-white font-medium">agentic</span>,
+              <span class="text-white font-medium">robust</span>, and
+              <span class="text-white font-medium">responsible</span> AI systems for financial decision-making.
             </p>
 
             <div class="mt-8 flex flex-wrap gap-3">
-              <a href="#challenge" class="px-5 py-2.5 rounded-xl bg-white text-black font-semibold hover:bg-gray-100">
+              <a href="https://www.kaggle.com/competitions/xforecast-challenge-icml/"
+                target="_blank"
+                class="inline-flex items-center gap-2 px-5 py-3 rounded-xl
+                        bg-gradient-to-r from-[#6E4AEF] via-[#E848A6] to-[#FA906F]
+                        text-white font-semibold shadow-lg shadow-pink-500/20 hover:opacity-90 transition">
+                <span data-lucide="external-link" class="w-4 h-4"></span>
                 Join Challenge
               </a>
-              <a href="#program" class="px-5 py-2.5 rounded-xl border border-white/15 bg-white/5 text-white hover:bg-white/10">
+
+              <a href="#program"
+                class="px-5 py-3 rounded-xl border border-white/15 bg-white/5 text-white font-medium hover:bg-white/10 transition">
                 View Program
               </a>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-3 text-sm text-gray-400">
+              <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                <span data-lucide="trophy" class="w-4 h-4 text-[#E848A6]"></span>
+                $4,500 Prize Pool
+              </span>
+              <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                <span data-lucide="calendar-range" class="w-4 h-4 text-[#B43AEA]"></span>
+                Mar–Jun 2026
+              </span>
+              <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                <span data-lucide="database" class="w-4 h-4 text-[#FA906F]"></span>
+                Reuters + FinTexTS
+              </span>
             </div>
           </div>
 
           <div class="lg:col-span-5">
-            <div class="glass-card rounded-2xl p-5">
-              <div class="text-sm text-gray-300 font-semibold">Highlights</div>
-              <ul class="mt-3 space-y-2 text-gray-300">
-                <li class="flex gap-2"><span data-lucide="sparkles" class="w-4 h-4 text-sky-300"></span> XForecast: news-grounded forecasting</li>
-                <li class="flex gap-2"><span data-lucide="shield" class="w-4 h-4 text-sky-300"></span> Robustness, verification, governance</li>
-                <li class="flex gap-2"><span data-lucide="users" class="w-4 h-4 text-sky-300"></span> Academia + industry invited speakers</li>
+            <div class="glass-card rounded-3xl p-6 border border-white/10 shadow-2xl shadow-pink-500/10">
+              <div class="flex items-center justify-between">
+                <div class="text-sm text-gray-300 font-semibold tracking-wide">Highlights</div>
+                <span class="text-xs px-2 py-1 rounded-full bg-white/5 border border-white/10 text-gray-400">
+                  Workshop + Challenge
+                </span>
+              </div>
+
+              <ul class="mt-4 space-y-3 text-gray-300 text-sm">
+                <li class="flex gap-3">
+                  <span data-lucide="trophy" class="w-4 h-4 mt-0.5 text-[#E848A6]"></span>
+                  <span><b>XForecast Challenge</b> hosted on Kaggle</span>
+                </li>
+
+                <li class="flex gap-3">
+                  <span data-lucide="newspaper" class="w-4 h-4 mt-0.5 text-[#B43AEA]"></span>
+                  <span><b>News-grounded forecasting</b> with financial text and market signals</span>
+                </li>
+
+                <li class="flex gap-3">
+                  <span data-lucide="database" class="w-4 h-4 mt-0.5 text-[#FA906F]"></span>
+                  <span><b>Data sources:</b> Reuters / LSEG News + FinTexTS dataset</span>
+                </li>
+
+                <li class="flex gap-3">
+                  <span data-lucide="layers" class="w-4 h-4 mt-0.5 text-[#6E4AEF]"></span>
+                  <span><b>Multimodal learning</b>: time-series + text</span>
+                </li>
+
+                <li class="flex gap-3">
+                  <span data-lucide="users" class="w-4 h-4 mt-0.5 text-[#E848A6]"></span>
+                  <span>Invited speakers from <b>academia and industry</b></span>
+                </li>
               </ul>
 
-              <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
-                <div class="glass-card rounded-xl p-3">
-                  <div class="text-gray-400">Prize Pool</div>
-                  <div class="font-semibold">$4,500</div>
+              <div class="mt-6 grid grid-cols-2 gap-3 text-sm">
+                <div class="glass-card rounded-2xl p-4">
+                  <div class="text-gray-400 text-xs uppercase tracking-wide">Prize Pool</div>
+                  <div class="mt-1 font-semibold text-white text-base">$4,500</div>
                 </div>
-                <div class="glass-card rounded-xl p-3">
-                  <div class="text-gray-400">Timeline</div>
-                  <div class="font-semibold">Apr–Jun 2026</div>
+
+                <div class="glass-card rounded-2xl p-4">
+                  <div class="text-gray-400 text-xs uppercase tracking-wide">Timeline</div>
+                  <div class="mt-1 font-semibold text-white text-base">Mar–Jun 2026</div>
                 </div>
-                <div class="glass-card rounded-xl p-3">
-                  <div class="text-gray-400">Dataset</div>
-                  <div class="font-semibold">LSEG Reuters News</div>
+
+                <div class="glass-card rounded-2xl p-4">
+                  <div class="text-gray-400 text-xs uppercase tracking-wide">Dataset</div>
+                  <div class="mt-1 font-semibold text-white text-sm leading-snug">
+                    Reuters News +
+                    <a href="https://arxiv.org/abs/2603.02702"
+                      target="_blank"
+                      class="underline hover:text-pink-300">
+                      FinTexTS
+                    </a>
+                  </div>
                 </div>
-                <div class="glass-card rounded-xl p-3">
-                  <div class="text-gray-400">Format</div>
-                  <div class="font-semibold">Talks + Posters + Panel</div>
+
+                <div class="glass-card rounded-2xl p-4">
+                  <div class="text-gray-400 text-xs uppercase tracking-wide">Challenge</div>
+                  <div class="mt-1 font-semibold text-white text-base">XForecast</div>
                 </div>
               </div>
 
-              <p class="mt-4 text-xs text-gray-400">
-                Replace TBD fields as soon as venue & deadlines are confirmed.
+              <p class="mt-5 text-xs text-gray-400 leading-relaxed">
+                A multimodal forecasting challenge built around realistic financial prediction settings,
+                including paired stock-price and news data.
               </p>
             </div>
           </div>
@@ -181,9 +251,9 @@
           empirical success and theoretical understanding widens.
         </p>
         <ul class="mt-4 space-y-2 text-sm text-gray-300">
-          <li class="flex gap-2"><span data-lucide="check" class="w-4 h-4 text-sky-300"></span> A unique laboratory for robustness: continual learning under constant distribution shift</li>
-          <li class="flex gap-2"><span data-lucide="check" class="w-4 h-4 text-sky-300"></span> The vanguard of AI safety & regulation: verification, certified robustness, governed autonomy</li>
-          <li class="flex gap-2"><span data-lucide="check" class="w-4 h-4 text-sky-300"></span> Agentic systems for mission-critical deployment in finance</li>
+          <li class="flex gap-2"><span data-lucide="check" class="w-4 h-4 text-[#B43AEA]"></span> A unique laboratory for robustness: continual learning under constant distribution shift</li>
+          <li class="flex gap-2"><span data-lucide="check" class="w-4 h-4 text-[#B43AEA]"></span> The vanguard of AI safety & regulation: verification, certified robustness, governed autonomy</li>
+          <li class="flex gap-2"><span data-lucide="check" class="w-4 h-4 text-[#B43AEA]"></span> Agentic systems for mission-critical deployment in finance</li>
         </ul>
       </div>
     </section>
@@ -236,7 +306,9 @@
                 Dataset
               </div>
               <p class="mt-2 text-gray-400">
-                Historical stock prices paired with Reuters / LSEG financial news.
+                Historical stock prices paired with Reuters / LSEG financial news,
+                as well as the <b>FinTexTS</b> dataset for structured financial text
+                and time-series alignment.
               </p>
             </div>
 
@@ -329,10 +401,6 @@
           </div>
         </div>
       </div>
-
-      <p class="mt-4 text-xs text-gray-400">
-        Details summarized from the challenge overview and Kaggle competition materials.  [oai_citation:1‡overview.pdf](sediment://file_000000002430720696520b848bd3db5c)
-      </p>
     </section>
 
     <!-- Dates -->
@@ -340,9 +408,9 @@
       <h2 class="text-2xl font-bold">Important Dates</h2>
       <div class="mt-4 glass-card rounded-2xl p-6 text-gray-300">
         <ul class="space-y-2 text-sm">
-          <li class="flex items-center gap-2"><span data-lucide="calendar-days" class="w-4 h-4 text-sky-300"></span> XForecast launch: <span class="text-gray-400">TBA (Apr 2026)</span></li>
-          <li class="flex items-center gap-2"><span data-lucide="calendar-check" class="w-4 h-4 text-sky-300"></span> XForecast deadline: <span class="text-gray-400">TBA (Jun 2026)</span></li>
-          <li class="flex items-center gap-2"><span data-lucide="map-pin" class="w-4 h-4 text-sky-300"></span> Workshop day: <span class="text-gray-400">TBA (ICML 2026)</span></li>
+          <li class="flex items-center gap-2"><span data-lucide="calendar-days" class="w-4 h-4 text-[#B43AEA]"></span> XForecast launch: <span class="text-gray-400">Mar 12, 2026</span></li>
+          <li class="flex items-center gap-2"><span data-lucide="calendar-check" class="w-4 h-4 text-[#B43AEA]"></span> XForecast deadline: <span class="text-gray-400">Jun 15, 2026</span></li>
+          <li class="flex items-center gap-2"><span data-lucide="map-pin" class="w-4 h-4 text-[#B43AEA]"></span> Workshop day: <span class="text-gray-400">TBA (ICML 2026)</span></li>
         </ul>
         <p class="mt-4 text-xs text-gray-400">Dates will be updated as soon as they are confirmed.</p>
       </div>
@@ -522,9 +590,9 @@
       <div class="mt-6 glass-card rounded-2xl p-6">
         <div class="text-sm text-gray-300 font-semibold">Primary Contacts</div>
         <div class="mt-2 text-sm text-gray-400">
-          Workshop Official (<a class="underline hover:text-sky-300" href="mailto:workshop.fin.ai.26@gmail.com">workshop.fin.ai.26@gmail.com</a>) ·
-          Wonbin Ahn (<a class="underline hover:text-sky-300" href="mailto:wonbin.ahn@lgresearch.ai">wonbin.ahn@lgresearch.ai</a>) ·
-          Yongjae Lee (<a class="underline hover:text-sky-300" href="mailto:yongjaelee@unist.ac.kr">yongjaelee@unist.ac.kr</a>)
+          Workshop Official (<a class="underline hover:text-[#B43AEA]" href="mailto:workshop.fin.ai.26@gmail.com">workshop.fin.ai.26@gmail.com</a>) ·
+          Wonbin Ahn (<a class="underline hover:text-[#B43AEA]" href="mailto:wonbin.ahn@lgresearch.ai">wonbin.ahn@lgresearch.ai</a>) ·
+          Yongjae Lee (<a class="underline hover:text-[#B43AEA]" href="mailto:yongjaelee@unist.ac.kr">yongjaelee@unist.ac.kr</a>)
         </div>
       </div>
     
