@@ -194,30 +194,70 @@
       <div class="mt-4 grid md:grid-cols-2 gap-4">
         <div class="glass-card rounded-2xl p-6 text-gray-300">
           <div class="font-semibold">Overview</div>
-          <p class="mt-2 text-sm text-gray-300">
-            A community challenge on <b>news-grounded financial forecasting</b>, designed to test how modern AI—from reasoning agents
-            to multimodal foundation models—can be operationalized to deconstruct complex market narratives.
+          <p class="mt-2 text-sm text-gray-300 leading-relaxed">
+          The <b>XForecast Challenge</b> is a community competition on 
+          <b>news-grounded financial forecasting</b>, organized as part of the 
+          ICML 2026 Workshop on Advances in Financial AI. The challenge explores 
+          how modern AI models can integrate <b>financial time-series data</b> 
+          with <b>unstructured textual information</b> to predict future market behavior.
           </p>
-          <ul class="mt-4 space-y-2 text-sm text-gray-300">
-            <li class="flex gap-2"><span data-lucide="database" class="w-4 h-4 text-sky-300"></span> Dataset: 5 years of LSEG Reuters News aligned with market price/volume</li>
-            <li class="flex gap-2"><span data-lucide="target" class="w-4 h-4 text-sky-300"></span> Task: out-of-sample forecasting for 2024–2025</li>
-            <li class="flex gap-2"><span data-lucide="trophy" class="w-4 h-4 text-sky-300"></span> Prize: $4,500 prize pool</li>
-            <li class="flex gap-2"><span data-lucide="calendar" class="w-4 h-4 text-sky-300"></span> Timeline: April–June 2026</li>
-          </ul>
-        </div>
 
-        <div class="glass-card rounded-2xl p-6 text-gray-300">
-          <div class="font-semibold">Links (TBA)</div>
-          <ul class="mt-3 text-sm space-y-2">
-            <li>Challenge page: <span class="text-gray-400">TBA</span></li>
-            <li>Rules: <span class="text-gray-400">TBA</span></li>
-            <li>Submission: <span class="text-gray-400">TBA</span></li>
-            <li>Baseline: <span class="text-gray-400">TBA</span></li>
-          </ul>
-          <p class="mt-4 text-xs text-gray-400">
-            Public links will be added when available.
+          <p class="mt-3 text-sm text-gray-300 leading-relaxed">
+          Participants are given historical stock price data together with 
+          associated financial news articles sourced from Reuters. The task is to 
+          build models that leverage both modalities to predict the 
+          <b>future closing price of stocks four weeks ahead</b>. The dataset covers 
+          multiple years of market activity, enabling participants to explore 
+          approaches that combine numerical market signals with textual information.
           </p>
-        </div>
+
+          <ul class="mt-4 space-y-2 text-sm text-gray-300">
+            <li class="flex gap-2">
+              <span data-lucide="database" class="w-4 h-4 text-purple-400"></span>
+              Dataset: historical stock prices paired with Reuters financial news
+            </li>
+
+            <li class="flex gap-2">
+              <span data-lucide="layers" class="w-4 h-4 text-purple-400"></span>
+              Multimodal forecasting using time-series and textual signals
+            </li>
+
+            <li class="flex gap-2">
+              <span data-lucide="target" class="w-4 h-4 text-purple-400"></span>
+              Task: predict the closing price of stocks <b>four weeks ahead</b>
+            </li>
+
+            <li class="flex gap-2">
+              <span data-lucide="bar-chart-2" class="w-4 h-4 text-purple-400"></span>
+              Evaluation: prediction accuracy measured using a <b>Hit Rate metric</b>
+            </li>
+
+            <li class="flex gap-2">
+              <span data-lucide="calendar" class="w-4 h-4 text-purple-400"></span>
+              Training period: 2019–2022 · Evaluation period: 2023
+            </li>
+          </ul>
+
+          <p class="mt-4 text-sm text-gray-300">
+          The competition focuses on the top 100 stocks by market capitalization 
+          and encourages participants to explore multimodal learning, representation 
+          learning, and forecasting methods for financial markets.
+          </p>
+
+          <p class="mt-4 text-sm">
+          <a href="https://www.kaggle.com/competitions/xforecast-challenge-icml/"
+            target="_blank"
+            class="text-purple-400 hover:text-pink-400 underline">
+          View the challenge on Kaggle →
+          </a>
+          </p>
+          <a href="https://www.kaggle.com/competitions/xforecast-challenge-icml/"
+          target="_blank"
+          class="inline-flex mt-4 px-4 py-2 rounded-lg
+          bg-gradient-to-r from-purple-500 to-pink-500
+          text-white text-sm font-semibold hover:opacity-90">
+          Join on Kaggle
+          </a>
       </div>
     </section>
 
