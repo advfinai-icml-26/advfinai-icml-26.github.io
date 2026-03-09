@@ -189,76 +189,150 @@
     </section>
 
     <!-- XForecast -->
+    <!-- XForecast Challenge -->
     <section id="challenge" class="mx-auto max-w-6xl px-4 sm:px-6 py-14">
-      <h2 class="text-2xl font-bold">XForecast Challenge</h2>
-      <div class="mt-4 grid md:grid-cols-2 gap-4">
-        <div class="glass-card rounded-2xl p-6 text-gray-300">
-          <div class="font-semibold">Overview</div>
-          <p class="mt-2 text-sm text-gray-300 leading-relaxed">
-          The <b>XForecast Challenge</b> is a community competition on 
-          <b>news-grounded financial forecasting</b>, organized as part of the 
-          ICML 2026 Workshop on Advances in Financial AI. The challenge explores 
-          how modern AI models can integrate <b>financial time-series data</b> 
-          with <b>unstructured textual information</b> to predict future market behavior.
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 class="text-2xl font-bold">XForecast Challenge</h2>
+          <p class="mt-2 text-gray-300 max-w-3xl">
+            A Kaggle competition on multimodal, news-grounded financial forecasting,
+            organized as part of the ICML 2026 Workshop on Advances in Financial AI.
+          </p>
+        </div>
+
+        <a href="https://www.kaggle.com/competitions/xforecast-challenge-icml/"
+          target="_blank"
+          class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl
+                  bg-gradient-to-r from-[#6E4AEF] via-[#E848A6] to-[#FA906F]
+                  text-white text-sm font-semibold hover:opacity-90 transition">
+          <span data-lucide="external-link" class="w-4 h-4"></span>
+          Join on Kaggle
+        </a>
+      </div>
+
+      <div class="mt-6 grid lg:grid-cols-5 gap-4">
+        <!-- Left: Overview -->
+        <div class="lg:col-span-3 glass-card rounded-2xl p-6 text-gray-300">
+          <div class="text-lg font-semibold text-white">Overview</div>
+
+          <p class="mt-4 text-sm leading-relaxed">
+            The XForecast Challenge explores how modern AI models can combine
+            <b>financial time-series data</b> with <b>unstructured news text</b>
+            to improve stock forecasting. Participants are given historical stock prices
+            together with associated Reuters financial news and are asked to predict
+            <b>future closing prices four weeks ahead</b>.
           </p>
 
-          <p class="mt-3 text-sm text-gray-300 leading-relaxed">
-          Participants are given historical stock price data together with 
-          associated financial news articles sourced from Reuters. The task is to 
-          build models that leverage both modalities to predict the 
-          <b>future closing price of stocks four weeks ahead</b>. The dataset covers 
-          multiple years of market activity, enabling participants to explore 
-          approaches that combine numerical market signals with textual information.
+          <p class="mt-4 text-sm leading-relaxed">
+            The challenge focuses on <b>100 stocks by market capitalization</b> and is designed
+            to encourage research on multimodal learning, representation learning, and robust
+            forecasting methods for financial markets.
           </p>
 
-          <ul class="mt-4 space-y-2 text-sm text-gray-300">
-            <li class="flex gap-2">
-              <span data-lucide="database" class="w-4 h-4 text-purple-400"></span>
-              Dataset: historical stock prices paired with Reuters financial news
+          <div class="mt-5 grid sm:grid-cols-2 gap-3 text-sm">
+            <div class="glass-card rounded-xl p-4">
+              <div class="flex items-center gap-2 text-white font-medium">
+                <span data-lucide="database" class="w-4 h-4 text-[#B43AEA]"></span>
+                Dataset
+              </div>
+              <p class="mt-2 text-gray-400">
+                Historical stock prices paired with Reuters / LSEG financial news.
+              </p>
+            </div>
+
+            <div class="glass-card rounded-xl p-4">
+              <div class="flex items-center gap-2 text-white font-medium">
+                <span data-lucide="layers" class="w-4 h-4 text-[#E848A6]"></span>
+                Modality
+              </div>
+              <p class="mt-2 text-gray-400">
+                Multimodal forecasting with numerical signals and textual context.
+              </p>
+            </div>
+
+            <div class="glass-card rounded-xl p-4">
+              <div class="flex items-center gap-2 text-white font-medium">
+                <span data-lucide="target" class="w-4 h-4 text-[#FA906F]"></span>
+                Task
+              </div>
+              <p class="mt-2 text-gray-400">
+                Predict stock closing prices <b>4 weeks ahead</b>.
+              </p>
+            </div>
+
+            <div class="glass-card rounded-xl p-4">
+              <div class="flex items-center gap-2 text-white font-medium">
+                <span data-lucide="bar-chart-3" class="w-4 h-4 text-[#6E4AEF]"></span>
+                Evaluation
+              </div>
+              <p class="mt-2 text-gray-400">
+                Ranked by a <b>Hit Rate</b>-based evaluation metric.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Key Details -->
+        <div class="lg:col-span-2 glass-card rounded-2xl p-6 text-gray-300">
+          <div class="text-lg font-semibold text-white">Key Details</div>
+
+          <ul class="mt-4 space-y-4 text-sm">
+            <li class="flex gap-3">
+              <span data-lucide="calendar-range" class="w-4 h-4 mt-0.5 text-[#6E4AEF]"></span>
+              <div>
+                <div class="font-medium text-white">Training / Evaluation</div>
+                <div class="text-gray-400">Training: 2019–2022 · Evaluation: 2023</div>
+              </div>
             </li>
 
-            <li class="flex gap-2">
-              <span data-lucide="layers" class="w-4 h-4 text-purple-400"></span>
-              Multimodal forecasting using time-series and textual signals
+            <li class="flex gap-3">
+              <span data-lucide="briefcase" class="w-4 h-4 mt-0.5 text-[#B43AEA]"></span>
+              <div>
+                <div class="font-medium text-white">Universe</div>
+                <div class="text-gray-400">Top 100 stocks by market capitalization</div>
+              </div>
             </li>
 
-            <li class="flex gap-2">
-              <span data-lucide="target" class="w-4 h-4 text-purple-400"></span>
-              Task: predict the closing price of stocks <b>four weeks ahead</b>
+            <li class="flex gap-3">
+              <span data-lucide="trophy" class="w-4 h-4 mt-0.5 text-[#E848A6]"></span>
+              <div>
+                <div class="font-medium text-white">Prizes</div>
+                <div class="text-gray-400">1st: $2,500 · 2nd: $1,500 · 3rd: $1,000</div>
+              </div>
             </li>
 
-            <li class="flex gap-2">
-              <span data-lucide="bar-chart-2" class="w-4 h-4 text-purple-400"></span>
-              Evaluation: prediction accuracy measured using a <b>Hit Rate metric</b>
+            <li class="flex gap-3">
+              <span data-lucide="clock-3" class="w-4 h-4 mt-0.5 text-[#FA906F]"></span>
+              <div>
+                <div class="font-medium text-white">Timeline</div>
+                <div class="text-gray-400">Start: Mar 12, 2026 · Deadline: Jun 15, 2026</div>
+              </div>
             </li>
 
-            <li class="flex gap-2">
-              <span data-lucide="calendar" class="w-4 h-4 text-purple-400"></span>
-              Training period: 2019–2022 · Evaluation period: 2023
+            <li class="flex gap-3">
+              <span data-lucide="shield-check" class="w-4 h-4 mt-0.5 text-[#E848A6]"></span>
+              <div>
+                <div class="font-medium text-white">Participation Note</div>
+                <div class="text-gray-400">
+                  Access is restricted because the challenge uses proprietary news data.
+                </div>
+              </div>
             </li>
           </ul>
 
-          <p class="mt-4 text-sm text-gray-300">
-          The competition focuses on the top 100 stocks by market capitalization 
-          and encourages participants to explore multimodal learning, representation 
-          learning, and forecasting methods for financial markets.
-          </p>
-
-          <p class="mt-4 text-sm">
-          <a href="https://www.kaggle.com/competitions/xforecast-challenge-icml/"
-            target="_blank"
-            class="text-purple-400 hover:text-pink-400 underline">
-          View the challenge on Kaggle →
-          </a>
-          </p>
-          <a href="https://www.kaggle.com/competitions/xforecast-challenge-icml/"
-          target="_blank"
-          class="inline-flex mt-4 px-4 py-2 rounded-lg
-          bg-gradient-to-r from-purple-500 to-pink-500
-          text-white text-sm font-semibold hover:opacity-90">
-          Join on Kaggle
-          </a>
+          <div class="mt-6 rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="text-xs uppercase tracking-wide text-gray-400">Quick Summary</div>
+            <p class="mt-2 text-sm text-gray-300 leading-relaxed">
+              Train on paired stock-price and news data, then predict future stock prices
+              under a realistic multimodal financial forecasting setup.
+            </p>
+          </div>
+        </div>
       </div>
+
+      <p class="mt-4 text-xs text-gray-400">
+        Details summarized from the challenge overview and Kaggle competition materials.  [oai_citation:1‡overview.pdf](sediment://file_000000002430720696520b848bd3db5c)
+      </p>
     </section>
 
     <!-- Dates -->
